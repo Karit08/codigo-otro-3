@@ -7,9 +7,17 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ];
 
-const listaProductos = document.getElementById("lista-de-productos"); // const li = document.getElementsByName("lista-de-productos")
-const inputFiltro = document.getElementById("inputFiltro"); // const $i = document.querySelector('.input');
+const listaProductos = document.getElementById("lista-de-productos"); 
+// Estaba usando const li = document.getElementsByName("lista-de-productos"),
+// pero debería ser document.getElementById("lista-de-productos") para seleccionar un div por su id.
+
+const inputFiltro = document.getElementById("inputFiltro"); 
+// El input debería ser seleccionado correctamente con querySelector y usando el selector adecuado
+// const $i = document.querySelector('.input');
+
 const botonDeFiltro = document.getElementById("botonFiltro");
+// El input debería ser seleccionado correctamente con querySelector y usando el selector adecuado
+// const botonDeFiltro = document.querySelector("button");
 
 // Función para mostrar productos en la página
 function mostrarProductos(productos) {
@@ -54,3 +62,52 @@ botonDeFiltro.onclick = function () {
     mostrarProductos(productos);
   }
 };
+
+
+
+// for (let i = 0; i < productos.length; i++) {
+//   var d = document.createElement("div")
+//   d.classList.add("producto")
+
+//   var ti = document.createElement("p")
+//   ti.classList.add("titulo")
+//   ti.textContent = productos[i].nombre
+  
+//   var imagen = document.createElement("img");
+//   imagen.setAttribute('src', productos[i].img);
+
+//   d.appendChild(ti)
+//   d.appendChild(imagen)
+
+//   li.appendChild(d)
+// }
+// displayProductos(productos)
+
+
+// botonDeFiltro.onclick = function() {
+//   while (li.firstChild) {
+//     li.removeChild(li.firstChild);
+//   }
+
+//   const texto = $i.value;
+//   console.log(texto);
+//   const productosFiltrados = filtrado(productos, texto );
+
+//   for (let i = 0; i < productosFiltrados.length; i++) {
+//     var d = document.createElement("div")
+//     d.classList.add("producto")
+  
+//     var ti = document.createElement("p")
+//     ti.classList.add("titulo")
+//     ti.textContent = productosFiltrados[i].nombre
+    
+//     var imagen = document.createElement("img");
+//     imagen.setAttribute('src', productosFiltrados[i].img);
+  
+//     d.appendChild(ti)
+//     d.appendChild(imagen)
+  
+//     li.appendChild(d)
+//   }
+// }
+
